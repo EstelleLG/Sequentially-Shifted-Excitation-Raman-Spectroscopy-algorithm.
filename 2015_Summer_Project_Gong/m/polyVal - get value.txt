@@ -1,0 +1,27 @@
+//polyVal
+//Given coef and x value, find the y value.
+
+std::vector<T> polyval( const std::vector<T>& oCoeff, 
+	const std::vector<T>& oX )
+{
+	size_t nCount =  oX.size();
+	size_t nDegree = oCoeff.size();
+	std::vector<T>	oY( nCount );
+ 
+	for ( size_t i = 0; i < nCount; i++ )
+	{
+		T nY = 0;
+		T nXT = 1;
+		T nX = oX[i];
+		for ( size_t j = 0; j < nDegree; j++ )
+		{
+			// multiply current x by a coefficient
+			nY += oCoeff[j] * nXT;
+			// power up the X
+			nXT *= nX;
+		}
+		oY[i] = nY;
+	}
+ 
+	return oY;
+}

@@ -1,0 +1,8 @@
+no simple and equivalent replacement     polyfit/polyval in LabView.
+
+
+nDegree
+need n degree.
+
+The estimate is constructed by fitting a function, 
+such as a low-order polynomial, to the data only where it appears to contain no peaks.
